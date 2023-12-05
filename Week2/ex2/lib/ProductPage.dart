@@ -48,6 +48,12 @@ class _ProductPageState extends State<ProductPage> {
                   products[index];
                   cart.add(products[index]);
                   products[index].tapped = true;
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ShowProduct(cart),
+                    ),
+                  );
                 });
               }
 

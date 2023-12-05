@@ -44,13 +44,13 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         children: [
           Image.network(
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSemqJG6yMnpMcDRjY8kq2tApVhH5LsLQpYoA&usqp=CAU",
+            "https://www.freepnglogos.com/uploads/iphone-logo-17.png",
             width: 500,
             height: 300,
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.deepPurple,
+              backgroundColor: Colors.black,
               foregroundColor: Colors.white,
             ),
             onPressed: () {
