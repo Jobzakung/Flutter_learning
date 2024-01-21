@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter JSON Quiz Example',
+      title: 'Flutter Quiz App',
       home: MyHomePage(),
     );
   }
@@ -23,64 +23,58 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late Future<List<Quiz>> futureQuizList;
-  late int? selectedQuizIndex; // Use int?
 
   @override
   void initState() {
     super.initState();
-    futureQuizList = loadJsonData();
-    selectedQuizIndex = null; // Initialize with null
+    futureQuizList = loadQuizData();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter JSON Quiz Example'),
+        title: Text('Flutter Quiz App'),
       ),
       body: Center(
         child: FutureBuilder<List<Quiz>>(
           future: futureQuizList,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              
-              List<DropdownMenuItem<int?>> dropdownItems = snapshot.data!
-                  .asMap()
-                  .entries
-                  .map((entry) => DropdownMenuItem<int?>(
-                        value: entry.key,
-                        child: Text(entry.value.title),
-                      ))
-                  .toList();
-
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  DropdownButton<int?>(
-                    value: selectedQuizIndex,
-                    items: dropdownItems,
-                    onChanged: (value) {
-                      setState(() {
-                        selectedQuizIndex = value;
-                      });
-                    },
-                  ),
-                  SizedBox(height: 16),
-                  if (selectedQuizIndex != null) // Check if a quiz is selected
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                            'Title: ${snapshot.data![selectedQuizIndex!].title}'),
-                        Text('Choices:'),
-                        for (var choice
-                            in snapshot.data![selectedQuizIndex!].choices)
-                          Text('  ${choice.title} (ID: ${choice.id})'),
-                        Text(
-                            'Answer ID: ${snapshot.data![selectedQuizIndex!].answerId}'),
-                        SizedBox(height: 16),
-                      ],
+                  for (var quiz in snapshot.data!)
+                    Card(
+                      margin: EdgeInsets.all(8),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.all(8),
+                            child: Text(
+                              quiz.question,
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ),
+                          for (var i = 0; i < quiz.choices.length; i++)
+                            RadioListTile<int>(
+                              title: Text(quiz.choices[i]),
+                              value: i,
+                              groupValue:
+                                  null, // Set groupValue based on user selection
+                              onChanged: (value) {
+                                // Handle user selection
+                              },
+                            ),
+                        ],
+                      ),
                     ),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Calculate and display the score
+                    },
+                    child: Text('Calculate Score'),
+                  ),
                 ],
               );
             } else if (snapshot.hasError) {

@@ -1,38 +1,19 @@
 class Quiz {
-  final String title;
-  final List<Choice> choices;
-  final int answerId;
+  late String question;
+  late List<String> choices;
+  late final int correctIndex;
 
   Quiz({
-    required this.title,
+    required this.question,
     required this.choices,
-    required this.answerId,
+    required this.correctIndex,
   });
 
   factory Quiz.fromJson(Map<String, dynamic> json) {
-    List<dynamic> choicesJson = json['choice'];
-
     return Quiz(
-      title: json['title'],
-      choices: choicesJson.map((choice) => Choice.fromJson(choice)).toList(),
-      answerId: json['answerId'],
-    );
-  }
-}
-
-class Choice {
-  final int id;
-  final String title;
-
-  Choice({
-    required this.id,
-    required this.title,
-  });
-
-  factory Choice.fromJson(Map<String, dynamic> json) {
-    return Choice(
-      id: json['id'],
-      title: json['title'],
+      question: json['question'],
+      choices: List<String>.from(json['choices']),
+      correctIndex: json['correctIndex'],
     );
   }
 }
