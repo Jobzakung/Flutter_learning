@@ -1,18 +1,26 @@
 [
     {
-      "question": "Read on for 10 claims alone are not equal.",
-      "choices": ["True", "False"],
-      "correctIndex": 1
+        "question": "Read on for 10 claims alone are not equal.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "correctIndex": 1
     },
     {
-      "question": "3 sing 3 verses 4 audience 3 verses 5 listen 4 verses",
-      "choices": ["True", "False"],
-      "correctIndex": 0
+        "question": "3 sing 3 verses 4 audience 3 verses 5 listen 4 verses",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "correctIndex": 0
     },
     {
-      "question": "There is a new Hot and Hurt button, no need to submit an answer to calculate the score.",
-      "choices": ["True", "False"],
-      "correctIndex": 0
+        "question": "There is a new Hot and Hurt button, no need to submit an answer to calculate the score.",
+        "choices": [
+            "True",
+            "False"
+        ],
+        "correctIndex": 0
     }
-  ]
-  
+]
