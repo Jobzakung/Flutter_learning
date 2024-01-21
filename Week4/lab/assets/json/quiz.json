@@ -1,0 +1,1048 @@
+[
+    {
+        "title": "What is the result of A + B?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A + B"
+            },
+            {
+                "id": 2,
+                "title": "A - B"
+            },
+            {
+                "id": 3,
+                "title": "2A"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Calculate A - B + C",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A + B - C"
+            },
+            {
+                "id": 2,
+                "title": "A - B + C"
+            },
+            {
+                "id": 3,
+                "title": "A - (B + C)"
+            }
+        ],
+        "answerID": 2
+    },
+    {
+        "title": "Find the value of 3A - 2B",
+        "choices": [
+            {
+                "id": 1,
+                "title": "3A - 2B"
+            },
+            {
+                "id": 2,
+                "title": "A - B"
+            },
+            {
+                "id": 3,
+                "title": "A + B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Simplify the expression A + (B - C)",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A + B - C"
+            },
+            {
+                "id": 2,
+                "title": "A - B + C"
+            },
+            {
+                "id": 3,
+                "title": "A - C + B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "If 2A = B, what is the value of A?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "B/2"
+            },
+            {
+                "id": 2,
+                "title": "A"
+            },
+            {
+                "id": 3,
+                "title": "2B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Evaluate A * B - C",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A * B - C"
+            },
+            {
+                "id": 2,
+                "title": "A * (B - C)"
+            },
+            {
+                "id": 3,
+                "title": "A * (B + C)"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the result of (A + B)^2?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A^2 + B^2"
+            },
+            {
+                "id": 2,
+                "title": "A^2 + 2AB + B^2"
+            },
+            {
+                "id": 3,
+                "title": "(A + B)(A + B)"
+            }
+        ],
+        "answerID": 2
+    },
+    {
+        "title": "If A = B, what is the value of A - B?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "0"
+            },
+            {
+                "id": 2,
+                "title": "2A"
+            },
+            {
+                "id": 3,
+                "title": "A + B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Solve for A in the equation 2A + B = C",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A = (C - B)/2"
+            },
+            {
+                "id": 2,
+                "title": "A = C - B"
+            },
+            {
+                "id": 3,
+                "title": "A = B - C/2"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the value of A^2 - B^2?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "(A - B)^2"
+            },
+            {
+                "id": 2,
+                "title": "(A + B)(A - B)"
+            },
+            {
+                "id": 3,
+                "title": "A^2 + B^2"
+            }
+        ],
+        "answerID": 2
+    },
+    {
+        "title": "What is the result of A + B?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A + B"
+            },
+            {
+                "id": 2,
+                "title": "A - B"
+            },
+            {
+                "id": 3,
+                "title": "2A"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Calculate A - B + C",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A + B - C"
+            },
+            {
+                "id": 2,
+                "title": "A - B + C"
+            },
+            {
+                "id": 3,
+                "title": "A - (B + C)"
+            }
+        ],
+        "answerID": 2
+    },
+    {
+        "title": "Find the value of 3A - 2B",
+        "choices": [
+            {
+                "id": 1,
+                "title": "3A - 2B"
+            },
+            {
+                "id": 2,
+                "title": "A - B"
+            },
+            {
+                "id": 3,
+                "title": "A + B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Simplify the expression A + (B - C)",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A + B - C"
+            },
+            {
+                "id": 2,
+                "title": "A - B + C"
+            },
+            {
+                "id": 3,
+                "title": "A - C + B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "If 2A = B, what is the value of A?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "B/2"
+            },
+            {
+                "id": 2,
+                "title": "A"
+            },
+            {
+                "id": 3,
+                "title": "2B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Evaluate A * B - C",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A * B - C"
+            },
+            {
+                "id": 2,
+                "title": "A * (B - C)"
+            },
+            {
+                "id": 3,
+                "title": "A * (B + C)"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the result of (A + B)^2?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A^2 + B^2"
+            },
+            {
+                "id": 2,
+                "title": "A^2 + 2AB + B^2"
+            },
+            {
+                "id": 3,
+                "title": "(A + B)(A + B)"
+            }
+        ],
+        "answerID": 2
+    },
+    {
+        "title": "If A = B, what is the value of A - B?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "0"
+            },
+            {
+                "id": 2,
+                "title": "2A"
+            },
+            {
+                "id": 3,
+                "title": "A + B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Solve for A in the equation 2A + B = C",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A = (C - B)/2"
+            },
+            {
+                "id": 2,
+                "title": "A = C - B"
+            },
+            {
+                "id": 3,
+                "title": "A = B - C/2"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the value of A^2 - B^2?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "(A - B)^2"
+            },
+            {
+                "id": 2,
+                "title": "(A + B)(A - B)"
+            },
+            {
+                "id": 3,
+                "title": "A^2 + B^2"
+            }
+        ],
+        "answerID": 2
+    },
+    {
+        "title": "Solve the equation A + B = C for A",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A = C - B"
+            },
+            {
+                "id": 2,
+                "title": "A = B - C"
+            },
+            {
+                "id": 3,
+                "title": "A = C + B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "If A * B = C, what is the value of A?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A = C/B"
+            },
+            {
+                "id": 2,
+                "title": "A = B/C"
+            },
+            {
+                "id": 3,
+                "title": "A = C*B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the simplified form of A + B + A - B?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "2A"
+            },
+            {
+                "id": 2,
+                "title": "A + B"
+            },
+            {
+                "id": 3,
+                "title": "B"
+            },
+            {
+                "id": 4,
+                "title": "A - B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the result of A + B?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A + B"
+            },
+            {
+                "id": 2,
+                "title": "A - B"
+            },
+            {
+                "id": 3,
+                "title": "2A"
+            },
+            {
+                "id": 4,
+                "title": "B - A"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Calculate A - B + C",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A + B - C"
+            },
+            {
+                "id": 2,
+                "title": "A - B + C"
+            },
+            {
+                "id": 3,
+                "title": "A - (B + C)"
+            },
+            {
+                "id": 4,
+                "title": "C - B + A"
+            }
+        ],
+        "answerID": 2
+    },
+    {
+        "title": "Find the value of 3A - 2B",
+        "choices": [
+            {
+                "id": 1,
+                "title": "3A - 2B"
+            },
+            {
+                "id": 2,
+                "title": "A - B"
+            },
+            {
+                "id": 3,
+                "title": "A + B"
+            },
+            {
+                "id": 4,
+                "title": "2B - 3A"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Simplify the expression A + (B - C)",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A + B - C"
+            },
+            {
+                "id": 2,
+                "title": "A - B + C"
+            },
+            {
+                "id": 3,
+                "title": "A - C + B"
+            },
+            {
+                "id": 4,
+                "title": "C - A + B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "If 2A = B, what is the value of A?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "B/2"
+            },
+            {
+                "id": 2,
+                "title": "A"
+            },
+            {
+                "id": 3,
+                "title": "2B"
+            },
+            {
+                "id": 4,
+                "title": "A/B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Evaluate A * B - C",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A * B - C"
+            },
+            {
+                "id": 2,
+                "title": "A * (B - C)"
+            },
+            {
+                "id": 3,
+                "title": "A * (B + C)"
+            },
+            {
+                "id": 4,
+                "title": "C - A * B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the result of (A + B)^2?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A^2 + B^2"
+            },
+            {
+                "id": 2,
+                "title": "A^2 + 2AB + B^2"
+            },
+            {
+                "id": 3,
+                "title": "(A + B)(A + B)"
+            },
+            {
+                "id": 4,
+                "title": "A^2 + 2AB - B^2"
+            }
+        ],
+        "answerID": 2
+    },
+    {
+        "title": "If A = B, what is the value of A - B?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "0"
+            },
+            {
+                "id": 2,
+                "title": "2A"
+            },
+            {
+                "id": 3,
+                "title": "A + B"
+            },
+            {
+                "id": 4,
+                "title": "2B - A"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Solve for A in the equation 2A + B = C",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A = (C - B)/2"
+            },
+            {
+                "id": 2,
+                "title": "A = C - B"
+            },
+            {
+                "id": 3,
+                "title": "A = B - C/2"
+            },
+            {
+                "id": 4,
+                "title": "A = (C + B)/2"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the value of A^2 - B^2?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "(A - B)^2"
+            },
+            {
+                "id": 2,
+                "title": "(A + B)(A - B)"
+            },
+            {
+                "id": 3,
+                "title": "A^2 + B^2"
+            },
+            {
+                "id": 4,
+                "title": "(A - B)(A + B)"
+            }
+        ],
+        "answerID": 2
+    },
+    {
+        "title": "Solve the equation A + B = C for A",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A = C - B"
+            },
+            {
+                "id": 2,
+                "title": "A = B - C"
+            },
+            {
+                "id": 3,
+                "title": "A = C + B"
+            },
+            {
+                "id": 4,
+                "title": "A = (C - B)/2"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "If A * B = C, what is the value of A?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A = C/B"
+            },
+            {
+                "id": 2,
+                "title": "A = B/C"
+            },
+            {
+                "id": 3,
+                "title": "A = C*B"
+            },
+            {
+                "id": 4,
+                "title": "A = (C + B)/C"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the simplified form of A + B + A - B?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "2A"
+            },
+            {
+                "id": 2,
+                "title": "A + B"
+            },
+            {
+                "id": 3,
+                "title": "B"
+            },
+            {
+                "id": 4,
+                "title": "A - B"
+            },
+            {
+                "id": 5,
+                "title": "A"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the result of A + B?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A + B"
+            },
+            {
+                "id": 2,
+                "title": "A - B"
+            },
+            {
+                "id": 3,
+                "title": "2A"
+            },
+            {
+                "id": 4,
+                "title": "B - A"
+            },
+            {
+                "id": 5,
+                "title": "B + A"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Calculate A - B + C",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A + B - C"
+            },
+            {
+                "id": 2,
+                "title": "A - B + C"
+            },
+            {
+                "id": 3,
+                "title": "A - (B + C)"
+            },
+            {
+                "id": 4,
+                "title": "C - B + A"
+            },
+            {
+                "id": 5,
+                "title": "C + A - B"
+            }
+        ],
+        "answerID": 2
+    },
+    {
+        "title": "Find the value of 3A - 2B",
+        "choices": [
+            {
+                "id": 1,
+                "title": "3A - 2B"
+            },
+            {
+                "id": 2,
+                "title": "A - B"
+            },
+            {
+                "id": 3,
+                "title": "A + B"
+            },
+            {
+                "id": 4,
+                "title": "2B - 3A"
+            },
+            {
+                "id": 5,
+                "title": "3A + 2B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Simplify the expression A + (B - C)",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A + B - C"
+            },
+            {
+                "id": 2,
+                "title": "A - B + C"
+            },
+            {
+                "id": 3,
+                "title": "A - C + B"
+            },
+            {
+                "id": 4,
+                "title": "C - A + B"
+            },
+            {
+                "id": 5,
+                "title": "B + A - C"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "If 2A = B, what is the value of A?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "B/2"
+            },
+            {
+                "id": 2,
+                "title": "A"
+            },
+            {
+                "id": 3,
+                "title": "2B"
+            },
+            {
+                "id": 4,
+                "title": "A/B"
+            },
+            {
+                "id": 5,
+                "title": "B/A"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Evaluate A * B - C",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A * B - C"
+            },
+            {
+                "id": 2,
+                "title": "A * (B - C)"
+            },
+            {
+                "id": 3,
+                "title": "A * (B + C)"
+            },
+            {
+                "id": 4,
+                "title": "C - A * B"
+            },
+            {
+                "id": 5,
+                "title": "A * B + C"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the result of (A + B)^2?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A^2 + B^2"
+            },
+            {
+                "id": 2,
+                "title": "A^2 + 2AB + B^2"
+            },
+            {
+                "id": 3,
+                "title": "(A + B)(A + B)"
+            },
+            {
+                "id": 4,
+                "title": "A^2 + 2AB - B^2"
+            },
+            {
+                "id": 5,
+                "title": "(A - B)^2"
+            }
+        ],
+        "answerID": 2
+    },
+    {
+        "title": "If A = B, what is the value of A - B?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "0"
+            },
+            {
+                "id": 2,
+                "title": "2A"
+            },
+            {
+                "id": 3,
+                "title": "A + B"
+            },
+            {
+                "id": 4,
+                "title": "2B - A"
+            },
+            {
+                "id": 5,
+                "title": "B - A"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "Solve for A in the equation 2A + B = C",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A = (C - B)/2"
+            },
+            {
+                "id": 2,
+                "title": "A = C - B"
+            },
+            {
+                "id": 3,
+                "title": "A = B - C/2"
+            },
+            {
+                "id": 4,
+                "title": "A = (C + B)/2"
+            },
+            {
+                "id": 5,
+                "title": "A = C/2 - B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the value of A^2 - B^2?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "(A - B)^2"
+            },
+            {
+                "id": 2,
+                "title": "(A + B)(A - B)"
+            },
+            {
+                "id": 3,
+                "title": "A^2 + B^2"
+            },
+            {
+                "id": 4,
+                "title": "(A - B)(A + B)"
+            },
+            {
+                "id": 5,
+                "title": "A^2 - 2AB + B^2"
+            }
+        ],
+        "answerID": 2
+    },
+    {
+        "title": "Solve the equation A + B = C for A",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A = C - B"
+            },
+            {
+                "id": 2,
+                "title": "A = B - C"
+            },
+            {
+                "id": 3,
+                "title": "A = C + B"
+            },
+            {
+                "id": 4,
+                "title": "A = (C - B)/2"
+            },
+            {
+                "id": 5,
+                "title": "A = (C + B)/2"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "If A * B = C, what is the value of A?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "A = C/B"
+            },
+            {
+                "id": 2,
+                "title": "A = B/C"
+            },
+            {
+                "id": 3,
+                "title": "A = C*B"
+            },
+            {
+                "id": 4,
+                "title": "A = (C + B)/C"
+            },
+            {
+                "id": 5,
+                "title": "A = C - B"
+            }
+        ],
+        "answerID": 1
+    },
+    {
+        "title": "What is the simplified form of A + B + A - B?",
+        "choices": [
+            {
+                "id": 1,
+                "title": "2A"
+            },
+            {
+                "id": 2,
+                "title": "A + B"
+            },
+            {
+                "id": 3,
+                "title": "B"
+            },
+            {
+                "id": 4,
+                "title": "A - B"
+            },
+            {
+                "id": 5,
+                "title": "A"
+            }
+        ],
+        "answerID": 1
+    }
+]
