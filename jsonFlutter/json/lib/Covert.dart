@@ -1,7 +1,3 @@
-import 'dart:convert';
-
-import 'package:flutter/services.dart';
-
 class Quiz {
   late String id;
   late List<String> options;
@@ -24,11 +20,11 @@ class Quiz {
 
 // ...
 
-Future<List<Quiz>> loadQuizData() async {
-  String jsonString = await rootBundle.loadString('assets/json/data.json');
-  Map<String, dynamic> jsonData = json.decode(jsonString);
+// Future<List<Quiz>> loadQuizData() async {
+//   String jsonString = await rootBundle.loadString('assets/json/data.json');
+//   Map<String, dynamic> jsonData = json.decode(jsonString);
 
-  List<dynamic> questions = jsonData['questions'];
+//   List<dynamic> questions = jsonData['questions'];
 
-  return questions.map((quiz) => Quiz.fromJson(quiz)).toList();
-}
+//   return questions.map((quiz) => Quiz.fromJson(quiz)).toList();
+// }

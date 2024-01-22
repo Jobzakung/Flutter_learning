@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'loadJson.dart';
 import 'Covert.dart';
 
 void main() {
@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    futureQuizList = loadQuizData();
+    futureQuizList = loadData();
   }
 
   @override
@@ -65,55 +65,74 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             snapshotData = snapshot.data!; // Store snapshot data
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Card(
-                  margin: EdgeInsets.all(8),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.all(8),
-                        child: Text(
-                          snapshotData[currentIndex].id,
-                          style: TextStyle(fontSize: 18),
+            return SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Card(
+                    margin: EdgeInsets.all(8),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Text(
+                            snapshotData[currentIndex].id,
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        ),
+                        for (var j = 0;
+                            j < snapshotData[currentIndex].options.length;
+                            j++)
+                          RadioListTile<int>(
+                            title: Text(snapshotData[currentIndex].options[j]),
+                            value: j,
+                            groupValue: userSelections.length > currentIndex
+                                ? userSelections[currentIndex]
+                                : null,
+                            onChanged: (value) {
+                              setState(() {
+                                if (userSelections.length <= currentIndex) {
+                                  userSelections.add(value);
+                                } else {
+                                  userSelections[currentIndex] = value;
+                                }
+                              });
+                            },
+                          ),
+                      ],
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      calculateAndShowScore();
+                    },
+                    child: Text('Submit Answer'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      switchToNextQuestion();
+                    },
+                    child: Text('Switch Question'),
+                  ),
+                  SizedBox(height: 16),
+                  // Buttons to navigate to specific quiz IDs
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: List.generate(
+                        10,
+                        (index) => ElevatedButton(
+                          onPressed: () {
+                            switchToQuiz(index + 1);
+                          },
+                          child: Text('Quiz ID ${index + 1}'),
                         ),
                       ),
-                      for (var j = 0;
-                          j < snapshotData[currentIndex].options.length;
-                          j++)
-                        RadioListTile<int>(
-                          title: Text(snapshotData[currentIndex].options[j]),
-                          value: j,
-                          groupValue: userSelections.length > currentIndex
-                              ? userSelections[currentIndex]
-                              : null,
-                          onChanged: (value) {
-                            setState(() {
-                              if (userSelections.length <= currentIndex) {
-                                userSelections.add(value);
-                              } else {
-                                userSelections[currentIndex] = value;
-                              }
-                            });
-                          },
-                        ),
-                    ],
+                    ),
                   ),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    calculateAndShowScore();
-                  },
-                  child: Text('Submit Answer'),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    switchToNextQuestion();
-                  },
-                  child: Text('Switch Question'),
-                ),
-              ],
+                ],
+              ),
             );
           } else if (snapshot.hasError) {
             return Text('Error: ${snapshot.error}');
@@ -123,6 +142,12 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
     );
+  }
+
+  void switchToQuiz(int quizId) {
+    setState(() {
+      currentIndex = quizId - 1;
+    });
   }
 
   Widget buildStatisticsTab() {
@@ -195,6 +220,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void switchToNextQuestion() {
     if (currentIndex < snapshotData.length - 1) {
+      //
       setState(() {
         currentIndex++;
       });
