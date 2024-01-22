@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:json/Covert.dart';
-import 'package:json/loadJson.dart';
+
+import 'Covert.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,6 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List<int?> userSelections = [];
   int currentIndex = 0;
   int totalScore = 0;
+  late List<Quiz> snapshotData; // Store snapshot data at class level
 
   @override
   void initState() {
@@ -63,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
         future: futureQuizList,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
+            snapshotData = snapshot.data!; // Store snapshot data
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -73,15 +75,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       Padding(
                         padding: EdgeInsets.all(8),
                         child: Text(
-                          snapshot.data![currentIndex].question,
+                          snapshotData[currentIndex].id,
                           style: TextStyle(fontSize: 18),
                         ),
                       ),
                       for (var j = 0;
-                          j < snapshot.data![currentIndex].choices.length;
+                          j < snapshotData[currentIndex].options.length;
                           j++)
                         RadioListTile<int>(
-                          title: Text(snapshot.data![currentIndex].choices[j]),
+                          title: Text(snapshotData[currentIndex].options[j]),
                           value: j,
                           groupValue: userSelections.length > currentIndex
                               ? userSelections[currentIndex]
@@ -101,13 +103,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    calculateAndShowScore(snapshot.data![currentIndex]);
+                    calculateAndShowScore();
                   },
                   child: Text('Submit Answer'),
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    switchToNextQuestion(snapshot.data!.length);
+                    switchToNextQuestion();
                   },
                   child: Text('Switch Question'),
                 ),
@@ -135,15 +137,17 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void calculateAndShowScore(Quiz currentQuiz) {
-    if (userSelections.length != (futureQuizList as List<Quiz>).length) {
+  void calculateAndShowScore() {
+    // Check if the user has answered the current question
+    if (userSelections[currentIndex] == null) {
       // Handle incomplete quiz
       showDialog(
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
             title: Text('Incomplete Quiz'),
-            content: Text('Please answer all questions before submitting.'),
+            content:
+                Text('Please answer the current question before submitting.'),
             actions: [
               TextButton(
                 onPressed: () {
@@ -158,14 +162,17 @@ class _MyHomePageState extends State<MyHomePage> {
       return;
     }
 
-    int correctAnswer = currentQuiz.correctIndex;
+    int? userAnswer = userSelections[currentIndex];
+    String correctAnswer = snapshotData[currentIndex].correctAnswer;
 
     // Display the score
     showDialog(
       context: context,
       builder: (BuildContext context) {
         String result = 'Incorrect';
-        if (userSelections[currentIndex] == correctAnswer) {
+        if (userAnswer != null &&
+            userAnswer ==
+                snapshotData[currentIndex].options.indexOf(correctAnswer)) {
           result = 'Correct';
           totalScore++;
         }
@@ -176,6 +183,7 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(
               onPressed: () {
                 Navigator.pop(context);
+                switchToNextQuestion();
               },
               child: Text('OK'),
             ),
@@ -185,10 +193,17 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void switchToNextQuestion(int totalQuestions) {
-    setState(() {
-      currentIndex = (currentIndex + 1) % totalQuestions;
-      userSelections.add(null); // Reset the selection for the new question
-    });
+  void switchToNextQuestion() {
+    if (currentIndex < snapshotData.length - 1) {
+      setState(() {
+        currentIndex++;
+      });
+    } else {
+      setState(() {
+        currentIndex = 0;
+        userSelections = List<int?>.filled(
+            snapshotData.length, null); // Reset user selections for new quiz
+      });
+    }
   }
 }

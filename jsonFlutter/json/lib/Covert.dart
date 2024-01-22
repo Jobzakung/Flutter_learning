@@ -1,19 +1,34 @@
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
+
 class Quiz {
-  late String question;
-  late List<String> choices;
-  late final int correctIndex;
+  late String id;
+  late List<String> options;
+  late String correctAnswer;
 
   Quiz({
-    required this.question,
-    required this.choices,
-    required this.correctIndex,
+    required this.id,
+    required this.options,
+    required this.correctAnswer,
   });
 
   factory Quiz.fromJson(Map<String, dynamic> json) {
     return Quiz(
-      question: json['question'],
-      choices: List<String>.from(json['choices']),
-      correctIndex: json['correctIndex'],
+      id: json['id'],
+      options: List<String>.from(json['options']),
+      correctAnswer: json['correct_answer'],
     );
   }
+}
+
+// ...
+
+Future<List<Quiz>> loadQuizData() async {
+  String jsonString = await rootBundle.loadString('assets/json/data.json');
+  Map<String, dynamic> jsonData = json.decode(jsonString);
+
+  List<dynamic> questions = jsonData['questions'];
+
+  return questions.map((quiz) => Quiz.fromJson(quiz)).toList();
 }
