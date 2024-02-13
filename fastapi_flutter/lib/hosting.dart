@@ -90,11 +90,11 @@ class _HostingState extends State<Hosting> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('User List'),
+        title: const Text('User List'),
         backgroundColor: Colors.blueGrey,
       ),
       body: users == null
-          ? Center(child: CircularProgressIndicator())
+          ? const Center(child: CircularProgressIndicator())
           : ListView.builder(
               itemCount: users!.length,
               itemBuilder: (context, index) {
@@ -116,7 +116,7 @@ class _HostingState extends State<Hosting> {
             },
           );
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }
