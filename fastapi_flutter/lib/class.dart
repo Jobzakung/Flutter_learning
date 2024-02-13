@@ -46,13 +46,11 @@ class UserCard extends StatelessWidget {
   final Users user;
   final Function(Users)? onUpdate;
   final Function(int)? onDelete;
-  final Function(String)? onAddUser;
 
   UserCard({
     required this.user,
     required this.onUpdate,
     required this.onDelete,
-    required this.onAddUser,
   });
 
   @override
@@ -95,7 +93,7 @@ class UserCard extends StatelessWidget {
                       );
                     });
               },
-              icon: Icon(Icons.edit, color: Colors.yellow),
+              icon: Icon(Icons.edit, color: Colors.blue),
             ),
             IconButton(
               onPressed: () {

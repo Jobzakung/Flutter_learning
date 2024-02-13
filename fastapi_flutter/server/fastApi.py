@@ -26,7 +26,6 @@ async def users():
 
 
 class User(BaseModel):
-    id: int
     name: str
 
 def create_user(user: User):
@@ -69,6 +68,4 @@ async def delete_user_route(id: int):
 
 if __name__ == "__main__":
     create_table()
-    config = uvicorn.Config(app)
-    server = uvicorn.Server(config)
-    server.run()
+    uvicorn.run(app, host="localhost", port=8000)

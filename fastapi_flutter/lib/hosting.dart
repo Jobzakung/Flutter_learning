@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'class.dart';
 
 class Hosting extends StatefulWidget {
-  const Hosting({super.key});
+  const Hosting({Key? key});
 
   @override
   State<Hosting> createState() => _HostingState();
@@ -25,20 +25,26 @@ class _HostingState extends State<Hosting> {
   }
 
   Future<void> insertUser(String name) async {
+    final Map<String, dynamic> userData = {
+      'id': 0, // Assuming the server generates the ID
+      'name': name,
+    };
+    final String userJson = jsonEncode(userData);
+
     final response = await http.post(
       Uri.parse('http://10.0.2.2:8000/users'),
-      body: jsonEncode({'name': name}),
+      body: userJson,
       headers: {
         'Content-Type': 'application/json',
-        "Accept": "application/json"
+        'Accept': 'application/json'
       },
     );
+
     if (response.statusCode == 200) {
-      setState(() {
-        fetchUsers();
-      }); // Refresh user list
+      fetchUsers(); // Refresh user list
     } else {
-      throw Exception('Failed to insert user');
+      throw Exception(
+          'Failed to insert user. Status code: ${response.statusCode}');
     }
   }
 
@@ -96,7 +102,6 @@ class _HostingState extends State<Hosting> {
                   user: users![index],
                   onUpdate: updateUser,
                   onDelete: deleteUser,
-                  onAddUser: insertUser,
                 );
               },
             ),
